@@ -1,12 +1,16 @@
 services:
   # nginx
-  web: 
+  web:
     image: nginx:latest
     ports:
       - "80:80"
+    volumes:
+      - ./nginx/conf.d/default.conf:/etc/nginx/conf.d/default.conf
   # php
   app:
     build:
       dockerfile: ./php/Dockerfile
-  # postgresql
+    volumes:
+      - ./app:/app
+  # mysql
   # redis
