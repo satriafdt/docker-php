@@ -1,4 +1,6 @@
-<?php ?>
+<?php 
+    echo 'Hello World Again!';
+?>
 
 <!doctype html>
 <html lang="en">
